@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 64.42143, g: 47.809998, b: 45.450928, a: 1}
+  m_IndirectSpecularColor: {r: 64.35246, g: 47.45572, b: 42.74109, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -605,6 +605,51 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1038490038992811144, guid: 8e9d256da49444344a0de415730c58f0, type: 3}
   m_PrefabInstance: {fileID: 999125418}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1461721944
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1461721946}
+  - component: {fileID: 1461721945}
+  m_Layer: 0
+  m_Name: Wind
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!182 &1461721945
+WindZone:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1461721944}
+  m_Enabled: 1
+  m_Mode: 0
+  m_Radius: 20
+  m_WindMain: 1
+  m_WindTurbulence: 1
+  m_WindPulseMagnitude: 0.5
+  m_WindPulseFrequency: 0.01
+--- !u!4 &1461721946
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1461721944}
+  m_LocalRotation: {x: -0, y: 0.8720358, z: -0, w: 0.4894422}
+  m_LocalPosition: {x: 10.279317, y: 15.008663, z: 19.897377}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 121.392, z: 0}
 --- !u!1 &1542897576
 GameObject:
   m_ObjectHideFlags: 0
@@ -1333,7 +1378,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8125482834156651482, guid: 4191bf1bcfa66de45943603842f35365, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -21.958544
+      value: -23.15
       objectReference: {fileID: 0}
     - target: {fileID: 8125482834156651482, guid: 4191bf1bcfa66de45943603842f35365, type: 3}
       propertyPath: m_LocalPosition.z
