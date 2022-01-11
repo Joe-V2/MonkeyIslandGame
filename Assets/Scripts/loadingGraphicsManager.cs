@@ -30,6 +30,7 @@ public class loadingGraphicsManager : MonoBehaviour
         cursorSfxPlayer = gameObject.AddComponent<AudioSource>();
 
         musicPlayer.clip = menuMusic;
+        musicPlayer.loop = true;
         envSfxPlayer.clip = sfx;
         envSfxPlayer.loop = true;
         envSfxPlayer.Play();
@@ -68,6 +69,9 @@ public class loadingGraphicsManager : MonoBehaviour
 
             if (fadeTime >= 1)
             {
+
+                musicPlayer.Play();
+
                 fadeTime = 0;
                 if (fadeOut)
                     SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);

@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 4676.618, g: 3217.4106, b: 3517.5645, a: 1}
+  m_IndirectSpecularColor: {r: 5307.883, g: 3719.7578, b: 3734.1094, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -780,7 +780,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &826551859
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -795,7 +795,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   blackout: {fileID: 828711447}
   logo: {fileID: 1245137044}
-  menuMusic: {fileID: 0}
+  menuMusic: {fileID: 8300000, guid: 1efc9cc6e99fb494daa844359e934b1a, type: 3}
   sfx: {fileID: 8300000, guid: 130fce29ecbfaea4a985a6814719e97a, type: 3}
   continueSfx: {fileID: 8300000, guid: 5733e15344182714ebc0ab52406bf3e4, type: 3}
 --- !u!114 &826551860
@@ -897,7 +897,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &828711446
 RectTransform:
   m_ObjectHideFlags: 0
@@ -989,8 +989,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 310}
-  m_SizeDelta: {x: 905, y: 368.58}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 1366, y: 718}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1245137046
 MonoBehaviour:
