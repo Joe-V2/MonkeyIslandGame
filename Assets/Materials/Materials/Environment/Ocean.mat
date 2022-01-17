@@ -23,7 +23,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Ocean
-  m_Shader: {fileID: -6465566751694194690, guid: d0b21faa00269c940bfe28c40c80bc18, type: 3}
+  m_Shader: {fileID: -6465566751694194690, guid: 2b8b263d7d3cda34daf22d42c23b257e, type: 3}
   m_ShaderKeywords: _ALPHATEST_ON _DISABLE_DECALS _SURFACE_TYPE_TRANSPARENT
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 1
@@ -166,15 +166,24 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Floats:
     - Vector1_00c9fcffbdef4fb4806a22efe26f26a1: 0.85
+    - Vector1_04ef7a26cbd5418992f277dc93ef3956: 5
     - Vector1_1179e6c21a2749b28f15872c37765852: 100
+    - Vector1_1ebcbff848c846d494115ab281a3c58d: 8
     - Vector1_385fcbaf22b7407a9b8ec66b44a2f7d7: 2
+    - Vector1_3eac6302312d49e59f7f812528045db4: 0
+    - Vector1_446ce66665da4cabb3705adae0fa3580: 3
     - Vector1_568c25e3ee1d424293da3ee75c29f3f7: 12.1
-    - Vector1_79f5adaf8089411391a48c7a4e3a594a: 10
+    - Vector1_711cff4eedd043429e0cb5220d090218: 0.5
+    - Vector1_786471d99ba14831b2febcdf3e6650db: 0
+    - Vector1_79f5adaf8089411391a48c7a4e3a594a: 28.72
     - Vector1_81101afa983140a19ac5cec770881621: 1
     - Vector1_82edf82b69c44782b2aaefa3bff48097: 0.05
     - Vector1_8e89ba98dff84f12a350ffb49b078865: 1
     - Vector1_a240b2fcc5514f22b8af212ca0381118: 5
+    - Vector1_a793c641f68749ed9afdb5d1705c807e: 1
+    - Vector1_b3d0118ac4814445a4d762712695b338: 2
     - Vector1_f78c6870b9c94b22bf9bbd72be99f7ae: 0.04
+    - Vector1_f7d6d765cdf04bfd94210dd6c526d709: 6
     - _AORemapMax: 1
     - _AORemapMin: 0
     - _ATDistance: 1
@@ -300,8 +309,10 @@ Material:
     - _ZWrite: 0
     m_Colors:
     - Color_114976ad47aa4e0f87f245ca1abe5679: {r: 1, g: 1, b: 1, a: 1}
-    - Color_35f5029e20ac403cbc7b74c35a25cbdc: {r: 0, g: 0.46605015, b: 1, a: 0.36862746}
-    - Color_bbc2acd19ac94be88d5cfb6725f3bc8c: {r: 0.17888924, g: 0.26646873, b: 0.5660378, a: 1}
+    - Color_35f5029e20ac403cbc7b74c35a25cbdc: {r: 0.054901943, g: 0.17254898, b: 0.23137254, a: 0.35686275}
+    - Color_92551cb3bdfd44298e4fee65b6f887f9: {r: 1, g: 1, b: 1, a: 0}
+    - Color_b2d71979ff27462a9107042237bfb32a: {r: 0, g: 0.46073478, b: 1, a: 0}
+    - Color_bbc2acd19ac94be88d5cfb6725f3bc8c: {r: 0.01223745, g: 0.07397116, b: 0.103773594, a: 1}
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
     - _BaseColorMap_MipInfo: {r: 0, g: 0, b: 0, a: 0}
     - _Color: {r: 1, g: 1, b: 1, a: 1}

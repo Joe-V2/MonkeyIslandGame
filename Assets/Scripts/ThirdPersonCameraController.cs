@@ -13,6 +13,8 @@ public class ThirdPersonCameraController : MonoBehaviour
     public bool invertMouse;
     public bool autoLockCursor;
     public Transform player;
+    public Vector3 defaultPos;
+    public Quaternion defaultRot;
 
     private Camera cam;
 
@@ -21,11 +23,13 @@ public class ThirdPersonCameraController : MonoBehaviour
         cam = this.gameObject.GetComponent<Camera>();
         this.gameObject.name = "ThirdPersonController";
         Cursor.lockState = (autoLockCursor) ? CursorLockMode.Locked : CursorLockMode.None;
+        defaultPos = transform.localPosition;
+        defaultRot = transform.localRotation;
     }
 
     void Update()
     {
-        if (Cursor.lockState == CursorLockMode.None && Input.GetMouseButtonDown(0))
+        if (Cursor.lockState != CursorLockMode.Locked && Input.GetMouseButtonDown(0))
         {
             Cursor.lockState = CursorLockMode.Locked;
         }
@@ -41,7 +45,6 @@ public class ThirdPersonCameraController : MonoBehaviour
 
             this.gameObject.transform.RotateAround(player.position, player.up, x);
             this.gameObject.transform.RotateAround(player.position, this.gameObject.transform.right, y);
-
         }
     }
 }

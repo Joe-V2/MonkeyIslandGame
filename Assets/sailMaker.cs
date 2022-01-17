@@ -9,6 +9,8 @@ public class sailMaker : MonoBehaviour
     public float subdivisions = 1;
     public GameObject sailObject;
     public Material sailMaterial;
+    public WindZone windSource;
+    public float damping = 0;
 
     private Cloth dynamics;
     private SkinnedMeshRenderer skinnedMesh;
@@ -62,8 +64,18 @@ public class sailMaker : MonoBehaviour
 
         dynamics.stretchingStiffness = 0.95f;
         dynamics.bendingStiffness = 0.1f;
-
+        dynamics.damping = damping;
         dynamics.coefficients = mountedVerts;
+    }
+
+    private void Update()
+    {
+        Vector3 windDirection = sailObject.transform.InverseTransformVector(windSource.transform.TransformVector(Vector3.forward));
+
+        windDirection.Scale(sailObject.transform.lossyScale);
+
+        dynamics.externalAcceleration = windDirection * windSource.windMain;
+        dynamics.randomAcceleration = windDirection * windSource.windTurbulence;
     }
 
     public class MeshHelper
