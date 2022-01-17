@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class boatController : MonoBehaviour
 {
@@ -8,6 +9,8 @@ public class boatController : MonoBehaviour
     public SphereCollider interactRadius;
     public Collider hullCollider;
     public CharacterController controller;
+    public ThirdPersonCameraController camController;
+    public Transform ship;
     public Transform viewRelative;
     public Transform riderPosition;
     public Transform riderView;
@@ -18,22 +21,47 @@ public class boatController : MonoBehaviour
     private bool camLerping = false;
     public void OnTriggerStay(Collider other)
     {
-        if (other.tag == "Player" && Input.GetKeyDown(KeyCode.E))
+        if (other.tag == "Player")
         {
-            if (!sailing)
+            if(!sailing)
+                KeyHintController.instance.ShowHint(KeyCode.E, "Go Sailing");
+            if (Input.GetKeyDown(KeyCode.E))
             {
-                other.gameObject.transform.parent = riderPosition;
-                other.gameObject.transform.localPosition = Vector3.zero;
-                other.gameObject.GetComponent<PlayerMovement>().enabled = false;
-                sailing = true;
+                if (!sailing)
+                {
+                    KeyHintController.instance.ShowHint(KeyCode.E, "", false);
+                    camController.player = controller.transform;
+                    camController.transform.parent = this.gameObject.transform;
+                    viewRelative.position = riderView.position;
+                    viewRelative.rotation = riderView.rotation;
 
+                    other.gameObject.transform.parent = riderPosition;
+                    other.gameObject.transform.localPosition = Vector3.zero;
+                    other.gameObject.GetComponent<PlayerMovement>().enabled = false;
+
+                    sailing = true;
+
+                }
+                else
+                {
+                    other.gameObject.transform.parent = null;
+                    other.gameObject.GetComponent<PlayerMovement>().enabled = true;
+
+                    camController.transform.parent = other.transform;
+                    camController.player = camController.transform.parent;
+                    camController.gameObject.transform.localPosition = camController.defaultPos;
+                    camController.gameObject.transform.localRotation = camController.defaultRot;
+                    sailing = false;
+                }
             }
-            else
-            {
-                other.gameObject.transform.parent = null;
-                other.gameObject.GetComponent<PlayerMovement>().enabled = true;
-                sailing = false;
-            }
+        }
+    }
+
+    public void OnTriggerExit(Collider other)
+    {
+        if(other.tag == "Player")
+        {
+            KeyHintController.instance.ShowHint(KeyCode.E, "", false);
         }
     }
 
@@ -67,8 +95,6 @@ public class boatController : MonoBehaviour
         if(sailing)
         {
 
-
-
             float x = Input.GetAxis("Horizontal");
             float z = Input.GetAxis("Vertical");
 
@@ -84,7 +110,8 @@ public class boatController : MonoBehaviour
 
             controller.Move(move * speed * Time.deltaTime);
             if (move != Vector3.zero)
-                this.gameObject.transform.rotation = Quaternion.Slerp(this.gameObject.transform.rotation, Quaternion.LookRotation(move), Time.deltaTime * 10);
+                ship.rotation = Quaternion.Slerp(ship.rotation, Quaternion.LookRotation(move), Time.deltaTime * 10);
+
         }
     }
 

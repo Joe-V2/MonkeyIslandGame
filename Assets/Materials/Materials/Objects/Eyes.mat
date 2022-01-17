@@ -8,15 +8,14 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Eyes
-  m_Shader: {fileID: 4800000, guid: 933532a4fcc9baf4fa0491de14d08ed7, type: 3}
+  m_Shader: {fileID: -6465566751694194690, guid: bcebc9ce27c38914ab465c3189313b56, type: 3}
   m_ShaderKeywords: _SPECULAR_SETUP
   m_LightmapFlags: 4
-  m_EnableInstancingVariants: 0
-  m_DoubleSidedGI: 0
-  m_CustomRenderQueue: 2000
+  m_EnableInstancingVariants: 1
+  m_DoubleSidedGI: 1
+  m_CustomRenderQueue: -1
   stringTagMap:
     MotionVector: User
-    RenderType: Opaque
   disabledShaderPasses:
   - TransparentDepthPrepass
   - TransparentDepthPostpass
@@ -31,7 +30,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - Texture2D_5F873FC1:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: 61407143737de4843ac95c202e170e9d, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - Texture2D_B9F5688C:
@@ -39,7 +38,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - Texture2D_D8BF6575:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: 4bad923194c1c63489b1f33b523f849b, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _AnisotropyMap:
@@ -176,8 +175,8 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Floats:
     - Boolean_8D34052F: 0
-    - DiffusionProfile_261f48f1fbc94ccbafc421414859c159: 2.7317202
-    - DiffusionProfile_bfbe0deb8ec4428a9cfcdb968651903c: 2.7317202
+    - DiffusionProfile_261f48f1fbc94ccbafc421414859c159: 3.0917568
+    - DiffusionProfile_bfbe0deb8ec4428a9cfcdb968651903c: 3.0917568
     - Vector1_2D21A623: 0.05
     - Vector1_49C490F5: 0.8
     - Vector1_6C2C412D: 0
@@ -187,9 +186,9 @@ Material:
     - Vector1_94E1614A: 0.01
     - Vector1_A6DA845F: 0
     - Vector1_C4ED1456: 0.01
-    - Vector1_DFF948F3: 0.681
+    - Vector1_DFF948F3: 0.192
     - Vector1_F084AE9E: 0
-    - Vector1_FC0895C8: 1.52
+    - Vector1_FC0895C8: 3.4
     - Vector1_FEA38ABB: 0.5
     - _AORemapMax: 1
     - _AORemapMin: 0
@@ -326,9 +325,9 @@ Material:
     - _ZTestTransparent: 4
     - _ZWrite: 1
     m_Colors:
-    - Color_83777D09: {r: 0, g: 0, b: 0, a: 0}
-    - DiffusionProfile_261f48f1fbc94ccbafc421414859c159_Asset: {r: -1.405437e+32, g: 2.0030989e-26, b: 0.00000006313206, a: -4.4045647e-18}
-    - DiffusionProfile_bfbe0deb8ec4428a9cfcdb968651903c_Asset: {r: -1.405437e+32, g: 2.0030989e-26, b: 0.00000006313206, a: -4.4045647e-18}
+    - Color_83777D09: {r: 1, g: 1, b: 1, a: 0}
+    - DiffusionProfile_261f48f1fbc94ccbafc421414859c159_Asset: {r: 5.9230507e-25, g: 1.5189545e+22, b: 1.7191895e+17, a: -3.524801e-20}
+    - DiffusionProfile_bfbe0deb8ec4428a9cfcdb968651903c_Asset: {r: 5.9230507e-25, g: 1.5189545e+22, b: 1.7191895e+17, a: -3.524801e-20}
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
     - _BaseColorMap_MipInfo: {r: 0, g: 0, b: 0, a: 0}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
@@ -373,7 +372,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_DiffusionProfileReferences:
-  - {fileID: 0}
+  - {fileID: 11400000, guid: 3e4f371752db4d64d8b1185c3b74269f, type: 2}
   m_MaterialReferences: []
 --- !u!114 &8859992973474408881
 MonoBehaviour:
