@@ -385,7 +385,7 @@ Light:
   m_Type: 1
   m_Shape: 0
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 4.12
+  m_Intensity: 1
   m_Range: 10
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
@@ -456,7 +456,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 339756313}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7a68c43fe1f2a47cfa234b5eeaa98012, type: 3}
   m_Name: 
@@ -911,27 +911,6 @@ Transform:
   m_Father: {fileID: 1179173801}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &540102798
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 578684688615695904}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 701895f32f329e44b847598e8931548d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  interactRadius: {fileID: 540102804}
-  hullCollider: {fileID: 2564551723327477814}
-  controller: {fileID: 578684688615695905}
-  camController: {fileID: 1276916690}
-  ship: {fileID: 2087845937}
-  viewRelative: {fileID: 1276916688}
-  riderPosition: {fileID: 1948550053}
-  riderView: {fileID: 846915538}
-  speed: 10
 --- !u!135 &540102804
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -1230,7 +1209,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1135268019}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 531fda911cce7154b9c1f1601586005a, type: 3}
+  m_Script: {fileID: 11500000, guid: d82147cf7c9134a408edce0de1ad41db, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   hintText: {fileID: 43264611}
@@ -1400,11 +1379,6 @@ Transform:
 --- !u!1 &1276916687 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4481156096305022230, guid: 4aa7547ffe6e9494b907d25114f6f103, type: 3}
-  m_PrefabInstance: {fileID: 4481156096035719311}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &1276916688 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4481156096305022229, guid: 4aa7547ffe6e9494b907d25114f6f103, type: 3}
   m_PrefabInstance: {fileID: 4481156096035719311}
   m_PrefabAsset: {fileID: 0}
 --- !u!114 &1276916690 stripped
@@ -2232,7 +2206,7 @@ GameObject:
   - component: {fileID: 1100281487802240269}
   - component: {fileID: 5358746896944197564}
   - component: {fileID: 540102804}
-  - component: {fileID: 540102798}
+  - component: {fileID: 578684688615695906}
   - component: {fileID: 578684688615695905}
   m_Layer: 0
   m_Name: Boat
@@ -2259,6 +2233,27 @@ CharacterController:
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &578684688615695906
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 578684688615695904}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 20744d3a14ea43341a47a2c3ffa27dc2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interactRadius: {fileID: 540102804}
+  hullCollider: {fileID: 2564551723327477814}
+  controller: {fileID: 578684688615695905}
+  camController: {fileID: 1276916690}
+  ship: {fileID: 459742333564520300}
+  viewRelative: {fileID: 846915538}
+  riderPosition: {fileID: 1948550053}
+  riderView: {fileID: 846915538}
+  speed: 2
 --- !u!1001 &712637797933743935
 PrefabInstance:
   m_ObjectHideFlags: 0
